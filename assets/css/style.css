@@ -479,6 +479,30 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; 
 .dirayah-title { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
 .dirayah-url { font-size: 0.84rem; color: var(--blue); margin-bottom: 14px; }
 .dirayah-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; }
+.dirayah-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dirayah-points li {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+}
+.dirayah-points li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 700;
+}
+.dirayah-points li strong { color: var(--text); }
+
 .dirayah-tech { display: flex; flex-wrap: wrap; gap: 7px; }
 .dirayah-visit {
   flex-shrink: 0;
