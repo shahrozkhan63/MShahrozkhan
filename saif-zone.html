@@ -116,6 +116,33 @@
       </div>
     </div>
 
+    <!-- Gallery -->
+    <div class="proj-section">
+      <div class="proj-section-label"><i class="bi bi-images"></i> Screenshots</div>
+      <div class="proj-gallery-grid">
+        <div class="proj-gallery-item" onclick="openLightbox(0)">
+          <img src="assets/img/portfolio/saifzone/mis-dashboard.PNG" alt="MIS Dashboard">
+          <div class="proj-gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <div class="proj-gallery-item" onclick="openLightbox(1)">
+          <img src="assets/img/portfolio/saifzone/mis-onlineservice.PNG" alt="Online Service">
+          <div class="proj-gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <div class="proj-gallery-item" onclick="openLightbox(2)">
+          <img src="assets/img/portfolio/saifzone/mis-onlineservicechild.PNG" alt="Online Service Detail">
+          <div class="proj-gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <div class="proj-gallery-item" onclick="openLightbox(3)">
+          <img src="assets/img/portfolio/saifzone/mis-mymemo.PNG" alt="My Memos">
+          <div class="proj-gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <div class="proj-gallery-item" onclick="openLightbox(4)">
+          <img src="assets/img/portfolio/saifzone/mis-memoapprovals.PNG" alt="Memo Approvals">
+          <div class="proj-gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Responsibilities + Tech Stack -->
     <div class="proj-two-col">
       <div class="proj-section">
@@ -177,6 +204,15 @@
 
 <button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></button>
 
+<!-- Lightbox -->
+<div class="img-lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="bi bi-x"></i></button>
+  <button class="lightbox-nav lightbox-prev" onclick="prevImage(event)"><i class="bi bi-chevron-left"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="nextImage(event)"><i class="bi bi-chevron-right"></i></button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
 <script>
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -186,6 +222,29 @@
   document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   document.getElementById('navToggle').addEventListener('click', () => {
     document.getElementById('navMobile').classList.toggle('open');
+  });
+
+  const images = Array.from(document.querySelectorAll('.proj-gallery-item img')).map(i => i.src);
+  let currentIdx = 0;
+  function openLightbox(idx) {
+    currentIdx = idx;
+    document.getElementById('lightboxImg').src = images[idx];
+    document.getElementById('lightboxCounter').textContent = (idx + 1) + ' / ' + images.length;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightboxOutside(e) { if (e.target === document.getElementById('lightbox')) closeLightbox(); }
+  function prevImage(e) { e.stopPropagation(); currentIdx = (currentIdx - 1 + images.length) % images.length; openLightbox(currentIdx); }
+  function nextImage(e) { e.stopPropagation(); currentIdx = (currentIdx + 1) % images.length; openLightbox(currentIdx); }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevImage({ stopPropagation: () => {} });
+    if (e.key === 'ArrowRight') nextImage({ stopPropagation: () => {} });
   });
 </script>
 </body>
