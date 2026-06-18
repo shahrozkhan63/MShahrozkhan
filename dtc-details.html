@@ -25,16 +25,18 @@
       <a href="index.html#experience">Experience</a>
       <a href="index.html#contact">Contact</a>
     </div>
-    <button class="nav-hamburger" id="navToggle" aria-label="Menu">
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
       <i class="bi bi-list"></i>
     </button>
   </div>
-  <div class="nav-mobile" id="navMobile">
-    <a href="index.html#about">About</a>
-    <a href="index.html#skills">Skills</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#experience">Experience</a>
-    <a href="index.html#contact">Contact</a>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html#about" class="mobile-link">About</a></li>
+      <li><a href="index.html#skills" class="mobile-link">Skills</a></li>
+      <li><a href="index.html#projects" class="mobile-link">Projects</a></li>
+      <li><a href="index.html#experience" class="mobile-link">Experience</a></li>
+      <li><a href="index.html#contact" class="mobile-link">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -175,9 +177,17 @@
     document.getElementById('backToTop').classList.toggle('active', window.scrollY > 300);
   });
   document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  document.getElementById('navToggle').addEventListener('click', () => {
-    document.getElementById('navMobile').classList.toggle('open');
+  const toggle = document.getElementById('mobileToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    const open = menu.style.display === 'block';
+    menu.style.display = open ? 'none' : 'block';
+    toggle.querySelector('i').className = open ? 'bi bi-list' : 'bi bi-x';
   });
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+    menu.style.display = 'none';
+    toggle.querySelector('i').className = 'bi bi-list';
+  }));
 
   const images = Array.from(document.querySelectorAll('.proj-gallery-item img')).map(i => i.src);
   let currentIdx = 0;
