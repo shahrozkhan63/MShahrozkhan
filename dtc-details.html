@@ -1,303 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dubai Taxi Infotainment — Muhammad Shahroz Khan</title>
+  <meta name="description" content="Dubai Taxi Corporation Android POS infotainment application — Muhammad Shahroz Khan portfolio project">
+  <link href="assets/img/favicon3.png" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="assets/css/style.css" rel="stylesheet">
-  <style>
-    .swiper-button-prev::after {
-      font-size: 30px;
-      position: relative;
-      left: -1px;
-    }
-
-    .swiper-button-next::after {
-      font-size: 30px;
-      position: relative;
-      left: 3px;
-    }
-
-    .swiper-button-prev,
-    .swiper-rtl .swiper-button-next {
-      background: gray;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      padding: 10;
-      padding: 10px;
-    }
-
-    .swiper-button-next,
-    .swiper-rtl .swiper-button-prev {
-      background: gray;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      padding: 10;
-      padding: 10px;
-    }
-
-    /* .swiper-slide img {
-      height: 700px;
-    } */
-  </style>
 </head>
-
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/Talal.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Talal Absar</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="#" class="google-plus"><i class="bx bxl-github"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
-          </li>
-          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a>
-          </li>
-          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-              <span>Portfolio</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
-              <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Shahroz<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
     </div>
-  </header><!-- End Header -->
+    <button class="nav-hamburger" id="navToggle" aria-label="Menu">
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
 
-  <main id="main">
+<!-- Hero -->
+<section class="proj-hero">
+  <div class="container">
+    <a href="index.html#projects" class="proj-back">
+      <i class="bi bi-arrow-left"></i> Back to Portfolio
+    </a>
+    <span class="section-label proj-hero-label">Android POS · Infotainment · Dubai</span>
+    <h1 class="proj-hero-title">Dubai Taxi <span class="gradient-text">Infotainment System</span></h1>
+    <p class="proj-hero-sub">DTC (Dubai Taxi Corporation) in-cab infotainment application deployed across 800+ Dubai taxis — delivering real-time dynamic content, Google Maps integration, weather, news, trip data, and integrated RTA payment services to passengers.</p>
+    <div class="proj-hero-meta">
+      <span class="proj-meta-item"><i class="bi bi-building"></i> Multilevel Technologies · Dubai, UAE</span>
+      <span class="proj-meta-item"><i class="bi bi-calendar3"></i> 2019 – 2020</span>
+      <span class="proj-meta-item"><i class="bi bi-car-front"></i> 800+ Taxis Deployed</span>
+    </div>
+  </div>
+</section>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+<!-- Body -->
+<section class="proj-body">
+  <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfolio Details</li>
-          </ol>
+    <!-- Overview + Features -->
+    <div class="proj-two-col">
+      <div class="proj-section">
+        <div class="proj-section-label"><i class="bi bi-info-circle"></i> Project Overview</div>
+        <div class="proj-card">
+          <div class="proj-desc">
+            <p>DTC is an infotainment application installed on Android POS devices fitted in Dubai taxis. Its purpose is to keep passengers engaged with dynamic content while providing the driver with real-time trip data.</p>
+            <p>All content is fully dynamic — fetched from dedicated APIs for each section and rendered on the Android POS screen. There is a separate API per content type: banners, videos, news, weather, maps, and payment services.</p>
+            <p>The application also integrates full RTA payment capabilities — passengers can pay fines, renew driving licenses, and renew vehicle registrations directly from the taxi during their trip.</p>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-12">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/dtc/DTCMainScreen.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/dtc/DTCSceens.png" alt="">
-                </div>
-              </div>
-              <!-- Add Navigation Arrows -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-12">
-            <div class="portfolio-info">
-              <h2>Project information</h3>
-                <div class="portfolio-description">
-                  <h2><b>DTC (Dubai Taxi Corporation)</b></h2>
-                  <p>
-                    DTC (Dubai Taxi Corporation)
-                    • DTC (Dubai Taxi Corporation) is an infotainment application installed in the Android POS device.
-                    </br>
-                    • The main screen displayed the images and video content, in addition there were trip details for
-                    the
-                    driver, banners, weather forecast, news update, technology or information updates section and other
-                    services.
-                    </br>
-                    • The purpose of these applications was to be installed in the taxis for the customers to engage
-                    them
-                    with the non-stop entertainment.
-                    </br>
-                    • These Android POS devices were installed in more than 800 taxis in Dubai.
-                    </br>
-                    • All the data shown on the screen was dynamic, fetched from the services and displayed on the
-                    Android
-                    POS devices.
-                    </br>
-                    • There were different APIs for each and every content, the APIs were consumed in an application,
-                    the
-                    response fetched from the APIs were manipulated and shown on the Android POS devices.
-                    </br>
-                    The description of the content and services are mentioned below
-                    </br>
-
-                    <b>• Banners:</b>
-                    </br>
-                    The top part contains the banners where the latest offers & promotions and ads were shown
-                    dynamically
-                    </br>
-                    <b>• Videos:</b>
-                    </br>
-                    Dubai government ‘Smart Teller Machine’ videos which helps customers by -showing the video to skip
-                    the
-                    long lines at the counter and use the machine for the services.
-                    </br>
-                    Offer and promotions on different stores.
-                    </br>
-                    New events
-                    </br>
-                    Restaurant offers
-                    </br>
-                    <b>• Weather forecast</b>
-                    </br>
-                    <b>• Trip details of the driver</b>
-                    </br>
-                    Start and end time of the driver
-                    </br>
-                    Taxi fare
-                    </br>
-                    Payment method
-                    </br>
-                    <b>• News</b>
-                    </br>
-                    News bulletin
-                    </br>
-                    News from different parts of the world were shown in the form of list
-                    </br>
-                    <b>• Google Maps</b>
-                    </br>
-                    Google maps were integrated in an application, to show the distance remaining and how far the route
-                    is
-                    , with traffic update
-                    </br>
-                    <b>• RTA (Road Transportation Authority) services</b>
-                    </br>
-                    Pay the fines
-                    </br>
-                    Renewing or replacing the driving license
-                    </br>
-                    Renewing or replacing the vehicle registration card
-                  </p>
-                </div>
-            </div>
-          </div>
-
-          <div class="col-lg-12">
-            <div class="portfolio-info">
-              <h2>Projet Responsibility</h2>
-              <div class="portfolio-description">
-                • Worked individually team on DTC (Dubai Taxi Corporation) project.<br>
-                • Responsible to consume the APIs for each service.<br>
-                • Designed the complete layout of an application.<br>
-                • Wrote end to end code unit tests which covered classes and functions tests, UI tests and integration
-                tests parts of the application.<br>
-                • Integrated the SDK in the Android POS device that reads the values from the EMV (Euro, Master, Visa)
-                cards.<br>
-                • Integrated the payment gateway.<br>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-12">
-            <div class="portfolio-info">
-              <h2>Tech Stack:</h2>
-              <div class="portfolio-description">
-                • Java<br>
-                • Kotlin<br>
-                • MVVM<br>
-                •	Clean Architecture<br>
-                • XML<br>
-                •	Flow<br>
-                • LiveData<br>
-                • Coroutines<br>
-                • Room<br>
-                • Retrofit<br>
-                • Navigation<br>
-                • Android Jetpack Libraries<br>
-                • Glide<br>
-                • REST/SOAP Services<br>
-                • Junit, Robolectric, Espresso<br>
-                • GitHub<br>
-                • Jira
-              </div>
-            </div>
-          </div>
-
+      <div class="proj-section">
+        <div class="proj-section-label"><i class="bi bi-grid"></i> Content & Services</div>
+        <div class="proj-card">
+          <ul class="proj-bullets">
+            <li><strong>Dynamic Banners</strong> — latest offers, promotions, and ads rendered in real time</li>
+            <li><strong>Videos</strong> — government Smart Teller videos, restaurant offers, events, promotions</li>
+            <li><strong>Weather Forecast</strong> — live weather data fetched via API</li>
+            <li><strong>Driver Trip Details</strong> — start/end time, fare, payment method</li>
+            <li><strong>News Bulletin</strong> — live news feed from multiple sources</li>
+            <li><strong>Google Maps</strong> — live route with traffic updates and distance remaining</li>
+            <li><strong>RTA Services</strong> — pay fines, renew driving license, renew vehicle registration</li>
+          </ul>
         </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Talal Absar 2023</span></strong>
       </div>
     </div>
-  </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <!-- Gallery -->
+    <div class="proj-section">
+      <div class="proj-section-label"><i class="bi bi-images"></i> Screenshots</div>
+      <div class="proj-gallery-grid">
+        <div class="proj-gallery-item" onclick="openLightbox(0)">
+          <img src="assets/img/portfolio/dtc/DTCMainScreen.png" alt="DTC Main Screen">
+          <div class="proj-gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <div class="proj-gallery-item" onclick="openLightbox(1)">
+          <img src="assets/img/portfolio/dtc/DTCSceens.png" alt="DTC Screens">
+          <div class="proj-gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Responsibilities + Tech Stack -->
+    <div class="proj-two-col">
+      <div class="proj-section">
+        <div class="proj-section-label"><i class="bi bi-person-check"></i> My Responsibilities</div>
+        <div class="proj-card">
+          <ul class="proj-bullets">
+            <li>Designed and built the complete application UI layout from scratch</li>
+            <li>Consumed REST/SOAP APIs for every content section independently</li>
+            <li>Integrated the EMV card SDK for Swipe, Insert, and Tap modes</li>
+            <li>Integrated RTA payment gateway within the infotainment flow</li>
+            <li>Implemented Google Maps SDK with live traffic and routing</li>
+            <li>Built real-time weather, news, and dynamic banner feeds</li>
+            <li>Wrote end-to-end unit, UI, and integration tests (JUnit, Robolectric, Espresso)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="proj-section">
+        <div class="proj-section-label"><i class="bi bi-code-slash"></i> Tech Stack</div>
+        <div class="proj-card">
+          <div class="proj-tech-grid">
+            <span class="proj-tech-pill">Java</span>
+            <span class="proj-tech-pill">Kotlin</span>
+            <span class="proj-tech-pill">MVVM</span>
+            <span class="proj-tech-pill">Clean Architecture</span>
+            <span class="proj-tech-pill">Jetpack Libraries</span>
+            <span class="proj-tech-pill">Coroutines</span>
+            <span class="proj-tech-pill">LiveData</span>
+            <span class="proj-tech-pill">Flow</span>
+            <span class="proj-tech-pill">Room</span>
+            <span class="proj-tech-pill">Retrofit</span>
+            <span class="proj-tech-pill">Navigation</span>
+            <span class="proj-tech-pill">Glide</span>
+            <span class="proj-tech-pill">Google Maps SDK</span>
+            <span class="proj-tech-pill">REST / SOAP APIs</span>
+            <span class="proj-tech-pill">EMV SDK</span>
+            <span class="proj-tech-pill">JUnit</span>
+            <span class="proj-tech-pill">Robolectric</span>
+            <span class="proj-tech-pill">Espresso</span>
+            <span class="proj-tech-pill">GitHub</span>
+            <span class="proj-tech-pill">Jira</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  </div>
+</section>
 
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="footer-text">&copy; 2026 <span>Muhammad Shahroz Khan</span> · All rights reserved</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Lightbox -->
+<div class="img-lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="bi bi-x"></i></button>
+  <button class="lightbox-nav lightbox-prev" onclick="prevImage(event)"><i class="bi bi-chevron-left"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="nextImage(event)"><i class="bi bi-chevron-right"></i></button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('backToTop').classList.toggle('active', window.scrollY > 300);
+  });
+  document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+
+  const images = Array.from(document.querySelectorAll('.proj-gallery-item img')).map(i => i.src);
+  let currentIdx = 0;
+  function openLightbox(idx) {
+    currentIdx = idx;
+    document.getElementById('lightboxImg').src = images[idx];
+    document.getElementById('lightboxCounter').textContent = (idx + 1) + ' / ' + images.length;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightboxOutside(e) { if (e.target === document.getElementById('lightbox')) closeLightbox(); }
+  function prevImage(e) { e.stopPropagation(); currentIdx = (currentIdx - 1 + images.length) % images.length; openLightbox(currentIdx); }
+  function nextImage(e) { e.stopPropagation(); currentIdx = (currentIdx + 1) % images.length; openLightbox(currentIdx); }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevImage({ stopPropagation: () => {} });
+    if (e.key === 'ArrowRight') nextImage({ stopPropagation: () => {} });
+  });
+</script>
 </body>
-
 </html>
